@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PERSONAL_INFO } from "@/data/portfolio-data";
-import { Mail, Linkedin, MapPin, Download, Copy, Check, Send, Sparkles, ExternalLink, RefreshCw } from "lucide-react";
+import { Mail, Linkedin, MapPin, Download, Copy, Check, Send, ExternalLink, RefreshCw } from "lucide-react";
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -127,7 +127,7 @@ export const ContactSection: React.FC = () => {
         <div className="lg:col-span-6">
           <div className="p-8 rounded-2xl bg-neutral-950/90 border border-neutral-800/90 shadow-2xl relative overflow-hidden">
             <h3 className="text-xl font-bold font-fira text-white mb-2 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-[#C3E41D]" /> Send a Direct Message
+              <Mail className="w-5 h-5 text-[#C3E41D]" /> Send a Direct Message
             </h3>
             <p className="text-xs text-neutral-400 font-mono mb-6">
               Leave your contact details and message below.
