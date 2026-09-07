@@ -26,18 +26,18 @@ export const ProjectsSection: React.FC = () => {
     <section id="projects" className="py-24 px-6 relative max-w-screen-xl mx-auto">
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
-        <span className="font-mono text-xs text-[#C3E41D] tracking-wider uppercase px-2.5 py-1 rounded bg-[#C3E41D]/10 border border-[#C3E41D]/30">
+        <span className="font-mono text-xs text-[#365314] dark:text-[#C3E41D] tracking-wider uppercase px-2.5 py-1 rounded bg-[#365314]/10 dark:bg-[#C3E41D]/10 border border-[#365314]/30 dark:border-[#C3E41D]/30 font-semibold">
           // 03. PROJECTS
         </span>
-        <div className="h-px bg-neutral-800 flex-1" />
+        <div className="h-px bg-neutral-300 dark:bg-neutral-800 flex-1" />
       </div>
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-fira tracking-tight text-foreground">
-            Featured <span className="text-[#C3E41D]">Engineering</span> Works.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-fira tracking-tight text-neutral-900 dark:text-foreground">
+            Featured <span className="text-[#365314] dark:text-[#C3E41D]">Engineering</span> Works.
           </h2>
-          <p className="text-neutral-400 mt-2 text-base max-w-xl">
+          <p className="text-neutral-700 dark:text-neutral-400 mt-2 text-base max-w-xl">
             From GPU-accelerated speech transcription to grounded RAG agents and embedded IoT telemetry.
           </p>
         </div>
@@ -50,8 +50,8 @@ export const ProjectsSection: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-200 ${
                 selectedCategory === cat
-                  ? "bg-[#C3E41D] text-black font-bold shadow-[0_0_15px_rgba(195,228,29,0.3)]"
-                  : "bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800"
+                  ? "bg-[#365314] dark:bg-[#C3E41D] text-white dark:text-black font-bold shadow-md"
+                  : "bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white border border-neutral-300 dark:border-neutral-800 font-medium"
               }`}
             >
               {cat}
@@ -76,42 +76,42 @@ export const ProjectsSection: React.FC = () => {
             tabIndex={0}
             aria-haspopup="dialog"
             aria-label={`Lihat detail proyek ${project.title}`}
-            className="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-neutral-950/80 border border-neutral-800/80 hover:border-[#C3E41D]/60 focus:border-[#C3E41D] focus:outline-none focus:ring-1 focus:ring-[#C3E41D] transition-all duration-300 group cursor-pointer hover:-translate-y-1.5 shadow-xl relative overflow-hidden"
+            className="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-neutral-950/80 border border-neutral-300 dark:border-neutral-800/80 hover:border-[#365314]/60 dark:hover:border-[#C3E41D]/60 focus:border-[#365314] dark:focus:border-[#C3E41D] focus:outline-none focus:ring-1 focus:ring-[#365314] dark:focus:ring-[#C3E41D] transition-all duration-300 group cursor-pointer hover:-translate-y-1.5 shadow-md dark:shadow-xl relative overflow-hidden"
           >
             {/* Ambient Corner Accent */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#C3E41D]/5 rounded-bl-full group-hover:bg-[#C3E41D]/15 transition-all duration-300 -z-0 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#365314]/5 dark:bg-[#C3E41D]/5 rounded-bl-full group-hover:bg-[#365314]/15 dark:group-hover:bg-[#C3E41D]/15 transition-all duration-300 -z-0 pointer-events-none" />
 
             <div>
               {/* Top Meta */}
               <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-neutral-900 text-[#C3E41D] border border-neutral-800">
+                <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-md bg-neutral-100 dark:bg-neutral-900 text-[#365314] dark:text-[#C3E41D] border border-neutral-300 dark:border-neutral-800">
                   {project.category}
                 </span>
                 {project.metrics && (
-                  <span className="text-[11px] font-mono text-neutral-400">
+                  <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-400 font-semibold">
                     {project.metrics}
                   </span>
                 )}
               </div>
 
               {/* Title & Subtitle */}
-              <h3 className="text-xl font-bold font-fira text-white group-hover:text-[#C3E41D] transition-colors line-clamp-2">
+              <h3 className="text-xl font-bold font-fira text-neutral-900 dark:text-white group-hover:text-[#365314] dark:group-hover:text-[#C3E41D] transition-colors line-clamp-2">
                 {project.title}
               </h3>
-              <p className="text-xs text-neutral-400 font-mono mt-1 mb-3">
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mt-1 mb-3">
                 {project.subtitle}
               </p>
 
               {/* Description */}
-              <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed mb-6">
+              <p className="text-sm text-neutral-700 dark:text-neutral-300 line-clamp-3 leading-relaxed mb-6">
                 {project.description}
               </p>
 
               {/* Feature Highlights */}
-              <ul className="space-y-1.5 mb-6 text-xs text-neutral-400">
+              <ul className="space-y-1.5 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
                 {project.features.slice(0, 2).map((feat, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#C3E41D] shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#365314] dark:text-[#C3E41D] shrink-0" />
                     <span className="line-clamp-1">{feat}</span>
                   </li>
                 ))}
@@ -119,12 +119,12 @@ export const ProjectsSection: React.FC = () => {
             </div>
 
             {/* Bottom Tech Tags & Action */}
-            <div className="pt-4 border-t border-neutral-900/90 flex items-center justify-between gap-2">
+            <div className="pt-4 border-t border-neutral-200 dark:border-neutral-900/90 flex items-center justify-between gap-2">
               <div className="flex flex-wrap gap-1.5">
                 {project.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-900 text-neutral-400"
+                    className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800"
                   >
                     {tag}
                   </span>
@@ -136,7 +136,7 @@ export const ProjectsSection: React.FC = () => {
                 )}
               </div>
 
-              <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 group-hover:text-black group-hover:bg-[#C3E41D] transition-colors shrink-0">
+              <div className="w-8 h-8 rounded-full bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-neutral-600 dark:text-neutral-400 group-hover:text-white dark:group-hover:text-black group-hover:bg-[#365314] dark:group-hover:bg-[#C3E41D] transition-colors shrink-0">
                 <ArrowUpRight className="w-4 h-4" />
               </div>
             </div>
@@ -147,52 +147,52 @@ export const ProjectsSection: React.FC = () => {
       {/* Project Detail Modal */}
       {activeProject && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-200"
           onClick={() => setActiveProject(null)}
           role="dialog"
           aria-modal="true"
           aria-labelledby="project-modal-title"
         >
           <div
-            className="w-full max-w-2xl bg-neutral-950 border border-neutral-800 rounded-2xl p-6 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[90vh]"
+            className="w-full max-w-2xl bg-white dark:bg-neutral-950 border border-neutral-300 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveProject(null)}
               aria-label="Tutup jendela modal detail proyek"
-              className="absolute top-5 right-5 text-neutral-400 hover:text-white p-2 rounded-lg bg-neutral-900 border border-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#C3E41D]"
+              className="absolute top-5 right-5 text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white p-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#365314] dark:focus:ring-[#C3E41D]"
             >
               ✕
             </button>
 
-            <span className="text-xs font-mono text-[#C3E41D] tracking-wider uppercase px-2.5 py-1 rounded bg-[#C3E41D]/10 border border-[#C3E41D]/30 inline-block mb-3">
+            <span className="text-xs font-mono text-[#365314] dark:text-[#C3E41D] tracking-wider uppercase px-2.5 py-1 rounded bg-[#365314]/10 dark:bg-[#C3E41D]/10 border border-[#365314]/30 dark:border-[#C3E41D]/30 inline-block mb-3 font-semibold">
               {activeProject.category}
             </span>
 
-            <h3 id="project-modal-title" className="text-2xl sm:text-3xl font-bold font-fira text-white mb-1">
+            <h3 id="project-modal-title" className="text-2xl sm:text-3xl font-bold font-fira text-neutral-900 dark:text-white mb-1">
               {activeProject.title}
             </h3>
-            <p className="text-sm font-mono text-neutral-400 mb-6">
+            <p className="text-sm font-mono text-neutral-600 dark:text-neutral-400 mb-6">
               {activeProject.subtitle}
             </p>
 
-            <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800 mb-6">
-              <div className="text-xs font-mono text-neutral-400 uppercase tracking-wider mb-1">
+            <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 mb-6">
+              <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-1 font-semibold">
                 Project Overview
               </div>
-              <p className="text-neutral-200 text-sm sm:text-base leading-relaxed">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {activeProject.description}
               </p>
             </div>
 
             <div className="mb-6">
-              <div className="text-xs font-mono text-neutral-400 uppercase tracking-wider mb-3">
+              <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-3 font-semibold">
                 Key Technical Features &amp; Outcomes
               </div>
               <div className="space-y-2">
                 {activeProject.features.map((feat, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-sm text-neutral-300">
-                    <CheckCircle2 className="w-4 h-4 text-[#C3E41D] mt-0.5 shrink-0" />
+                  <div key={idx} className="flex items-start gap-3 text-sm text-neutral-800 dark:text-neutral-300">
+                    <CheckCircle2 className="w-4 h-4 text-[#365314] dark:text-[#C3E41D] mt-0.5 shrink-0" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -200,14 +200,14 @@ export const ProjectsSection: React.FC = () => {
             </div>
 
             <div>
-              <div className="text-xs font-mono text-neutral-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2 font-semibold">
                 Technologies &amp; Frameworks
               </div>
               <div className="flex flex-wrap gap-2">
                 {activeProject.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-mono px-3 py-1 rounded-md bg-neutral-900 text-[#C3E41D] border border-neutral-800"
+                    className="text-xs font-mono px-3 py-1 rounded-md bg-neutral-100 dark:bg-neutral-900 text-[#365314] dark:text-[#C3E41D] border border-neutral-300 dark:border-neutral-800 font-semibold"
                   >
                     #{tag}
                   </span>

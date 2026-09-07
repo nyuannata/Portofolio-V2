@@ -170,7 +170,7 @@ export default function PortfolioHero({ onNavigate }: PortfolioHeroProps) {
             <button
               ref={buttonRef}
               type="button"
-              className="p-2 transition-colors duration-300 z-50 text-neutral-500 hover:text-black dark:hover:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C3E41D]"
+              className="p-2 transition-colors duration-300 z-50 text-neutral-700 dark:text-neutral-400 hover:text-black dark:hover:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C3E41D]"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -184,12 +184,12 @@ export default function PortfolioHero({ onNavigate }: PortfolioHeroProps) {
             {isMenuOpen && (
               <div
                 ref={menuRef}
-                className="absolute top-full left-0 w-[220px] md:w-[260px] border border-neutral-800 shadow-2xl mt-2 ml-4 p-4 rounded-xl z-[100] backdrop-blur-xl animate-in fade-in slide-in-from-top-3 duration-200"
+                className="absolute top-full left-0 w-[220px] md:w-[260px] border border-neutral-300 dark:border-neutral-800 shadow-2xl mt-2 ml-4 p-4 rounded-xl z-[100] backdrop-blur-xl animate-in fade-in slide-in-from-top-3 duration-200"
                 style={{
-                  backgroundColor: isDark ? "rgba(10, 10, 10, 0.95)" : "rgba(255, 255, 255, 0.95)",
+                  backgroundColor: isDark ? "rgba(10, 10, 10, 0.95)" : "rgba(255, 255, 255, 0.98)",
                 }}
               >
-                <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2 px-2 font-mono">
+                <div className="text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400 mb-2 px-2 font-mono font-semibold">
                   Navigation
                 </div>
                 {menuItems.map((item) => (
@@ -302,10 +302,10 @@ export default function PortfolioHero({ onNavigate }: PortfolioHeroProps) {
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-center transition-colors duration-300 text-neutral-400 hover:text-black dark:hover:text-white font-medium"
+              className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-center transition-colors duration-300 text-neutral-800 dark:text-neutral-400 hover:text-black dark:hover:text-white font-medium"
               style={{ fontFamily: "'Antic', sans-serif" }}
             />
-            <p className="text-xs sm:text-sm text-neutral-500 font-mono tracking-widest uppercase">
+            <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-500 font-mono tracking-widest uppercase font-semibold">
               AI Engineer &bull; Speech Recognition &bull; LLM &amp; RAG
             </p>
           </div>
@@ -323,7 +323,7 @@ export default function PortfolioHero({ onNavigate }: PortfolioHeroProps) {
           className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 transition-all duration-300 hover:translate-y-1 group"
           aria-label="Scroll down to About section"
         >
-          <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-neutral-500 group-hover:text-[#C3E41D] transition-colors duration-300 animate-bounce" />
+          <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-neutral-700 dark:text-neutral-500 group-hover:text-[#365314] dark:group-hover:text-[#C3E41D] transition-colors duration-300 animate-bounce" />
         </button>
       </main>
     </div>
