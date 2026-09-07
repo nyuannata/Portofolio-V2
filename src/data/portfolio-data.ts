@@ -43,7 +43,7 @@ export const PERSONAL_INFO = {
   location: "Bekasi, Indonesia",
   linkedin: "https://linkedin.com/in/yuan-nata-nugraha-590212361",
   linkedinDisplay: "linkedin.com/in/yuan-nata-nugraha-590212361",
-  email: "yuannatanugraha@gmail.com",
+  email: "nyuannata@gmail.com",
   cvUrl: "/CV.pdf",
   profileImage: "/profile.png",
   summary:
